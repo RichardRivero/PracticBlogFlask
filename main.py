@@ -23,7 +23,7 @@ class Post(db.Model): # creando la tabal de la bse de datos
 # db.create_all()            con esto abremos creado el archoivo de la bd
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-
+# rutas de paginas 
 @app.route("/")
 def inicio():
     post = Post.query.orden_by(Post.fecha.desc()).all()
