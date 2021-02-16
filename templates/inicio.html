@@ -6,6 +6,9 @@
 <section>
     <h3 class="post-title">{{post.titulo}}</h3>
 
+        <p class="date"> Publicado en: {{ post.fecha.strftime('%m/%d/%Y')}}</p>
+        <p>{{ post.texto }</p>
+        
 </section>
 
  {% endfor %} 
