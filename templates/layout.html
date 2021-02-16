@@ -4,10 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'styl.css')}}">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'style.css')}}">
+    <title>Ejemplo Mundo Python Blog</title>
 </head>
 <body>
+    <header>
+        <nav>
+            <h1>Flack Blog</h1>
+            <ul>
+                <li><a href="{{url_for('inicio'}}">inicio</a></li>
+                <li><a href="{{url_for('agregar'}}">Agregar</a></li>
+            </ul>
+        </nav>
+    </header>
     
 </body>
 </html>
