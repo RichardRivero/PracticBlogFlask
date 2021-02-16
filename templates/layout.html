@@ -8,15 +8,17 @@
     <title>Ejemplo Mundo Python Blog</title>
 </head>
 <body>
-    <header>
+    <header class="main-head">
         <nav>
-            <h1>Flack Blog</h1>
+            <h1 id="logo">Flack Blog</h1>
             <ul>
                 <li><a href="{{url_for('inicio'}}">inicio</a></li>
                 <li><a href="{{url_for('agregar'}}">Agregar</a></li>
             </ul>
         </nav>
     </header>
+    {%block body%}
+    {%endblock%}
     
 </body>
 </html>
