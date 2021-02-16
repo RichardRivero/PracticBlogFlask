@@ -26,7 +26,7 @@ class Post(db.Model): # creando la tabal de la bse de datos
 # rutas de paginas 
 @app.route("/")
 def inicio():
-    post = Post.query.orden_by(Post.fecha.desc()).all()
+    posts = Post.query.orden_by(Post.fecha.desc()).all()
     return render_template("inicio.html" , posts = posts)
 
 @app.route("/agregar")
