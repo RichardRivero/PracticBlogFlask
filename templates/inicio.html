@@ -1,0 +1,13 @@
+{% extends "layout.html"%}
+
+{% block body %}
+
+{% for post in posts %}
+<section>
+    <h3 class="post-title">{{post.titulo}}</h3>
+
+</section>
+
+ {% endfor %} 
+{% endblock %}
+    
