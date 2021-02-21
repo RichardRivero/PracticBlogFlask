@@ -12,7 +12,7 @@ db = SQLAlchemy(app)
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #Nota: normalemnte estes codigo va dentro de otro archivo
 class Post(db.Model): # creando la tabal de la bse de datos 
-    __tablename__ = "posts"
+    __tablename__ = "posts"     
     id      = db.Column(db.Integer, primary_key = True)
     titulo  = db.Column(db.String, nullable = False)
     fecha   = db.Column(db.DateTime, default = datetime.now)
