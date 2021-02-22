@@ -37,7 +37,11 @@ def agregar():
 def crear_post():
     titulo = request.form.get("titulo") 
     texto = request.form.get("texto")
-    titulo = request.form.get("tit")
+    post = Post(titulo = titulo, texto = texto)
+    db.session.add(post)
+    db.session.commit()
+    return redirect("/")
+    
 @app.route("/otros")
 def otros():
     return render_template("otros.html")
