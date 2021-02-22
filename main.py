@@ -1,4 +1,4 @@
-from flask import Flask ,render_template,request redirect  # importamos la libreria
+from flask import Flask ,render_template,request, redirect  # importamos la libreria
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
@@ -41,7 +41,7 @@ def crear_post():
     db.session.add(post)
     db.session.commit()
     return redirect("/")
-    
+
 @app.route("/otros")
 def otros():
     return render_template("otros.html")
