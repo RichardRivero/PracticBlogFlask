@@ -1,4 +1,4 @@
-from flask import Flask ,render_template  # importamos la libreria
+from flask import Flask ,render_template,request redirect  # importamos la libreria
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
@@ -33,6 +33,11 @@ def inicio():
 def agregar():
     return render_template("agregar.html")
 
+@app.route("/crear", methods=["post"])
+def crear_post():
+    titulo = request.form.get("titulo") 
+    texto = request.form.get("texto")
+    titulo = request.form.get("tit")
 @app.route("/otros")
 def otros():
     return render_template("otros.html")
