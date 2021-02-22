@@ -33,13 +33,13 @@ def inicio():
 def agregar():
     return render_template("agregar.html")
 
-@app.route("/crear", methods=["post"])
+@app.route("/crear", methods=["POST"])
 def crear_post():
     titulo = request.form.get("titulo") 
     texto = request.form.get("texto")
-    post = Post(titulo = titulo, texto = texto)
+    post = Post(titulo=titulo, texto=texto)
     db.session.add(post)
-    db.session.commit()
+    db.session.commit() 
     return redirect("/")
 
 @app.route("/otros")
