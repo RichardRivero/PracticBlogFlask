@@ -40,7 +40,7 @@ def crear_post():
     post = Post(titulo=titulo, texto=texto)
     db.session.add(post)
     db.session.commit() 
-    return redirect("/")
+    return redirect("/")  # el metodo redirecciona a otra direccion
 
 @app.route("/otros")
 def otros():
