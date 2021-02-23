@@ -6,7 +6,7 @@
     <h3 class="post-title">{{post.titulo}}</h3>
         <p class="date"> Publicado en: {{ post.fecha.strftime('%m/%d/%Y')}}</p>
         <p>{{ post.texto }}</p>
-        <form class="deelete-button" action="{{url_for('borrar')}}" method="POST">
+        <form class="delete-button" action="{{url_for('borrar')}}" method="POST">
             <button value="{{post_id}}" name="post_id">Borrar post</button>
         </form>
 </section>
