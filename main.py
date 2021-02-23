@@ -42,14 +42,14 @@ def crear_post():
     db.session.commit() 
     return redirect("/")  # el metodo redirecciona a otra direccion
 
-@app.route("/borrar" , methods=["POST"])
-def borar():
+@app.route("/borrar", methods=["POST"])
+def borrar():
     post_id = request.form.get("post_id")
-    post = db.session.query(Post).filter(post.id==post_id).first()
+    post = db.session.query(Post).filter(Post.id==post_id).first()
     db.session.delete(post)
     db.session.commit()
     return redirect("/")
-    
+
 @app.route("/otros")
 def otros():
     return render_template("otros.html")
