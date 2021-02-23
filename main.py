@@ -35,7 +35,7 @@ def agregar():
 
 @app.route("/crear", methods=["POST"])
 def crear_post():
-    titulo = request.form.get("titulo") 
+    titulo = request.form.get("titulo") # la concexion se hace con el nombre de la etiqueta que se colo en la apgina agregar
     texto = request.form.get("texto")
     post = Post(titulo=titulo, texto=texto)
     db.session.add(post)
